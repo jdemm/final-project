@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :colors
+  resources :a_colors
   resources :posts
   
   root 'a_colors#index'

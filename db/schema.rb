@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308234519) do
+ActiveRecord::Schema.define(version: 20160515000808) do
 
-  create_table "colors", force: :cascade do |t|
+  create_table "a_colors", force: :cascade do |t|
     t.integer  "r"
     t.integer  "g"
     t.integer  "b"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20160308234519) do
     t.integer  "user_id"
   end
 
-  add_index "colors", ["user_id"], name: "index_colors_on_user_id"
+  add_index "a_colors", ["user_id"], name: "index_a_colors_on_user_id"
 
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at", null: false

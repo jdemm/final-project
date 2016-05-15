@@ -24,7 +24,7 @@ class AColorsController < ApplicationController
   # POST /a_colors
   # POST /a_colors.json
   def create
-    @color = current_user.a_colors.new(a_color_params)
+    @a_color = current_user.a_colors.new(a_color_params)
 
     respond_to do |format|
       if @a_color.save
@@ -41,7 +41,7 @@ class AColorsController < ApplicationController
   # PATCH/PUT /colors/1.json
   def update
     respond_to do |format|
-      if @a_color.update(color_params)
+      if @a_color.update(a_color_params)
         format.html { redirect_to @a_color, notice: 'Color was successfully updated.' }
         format.json { render :show, status: :ok, location: @a_color }
       else
@@ -63,12 +63,12 @@ class AColorsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_color
+    def set_a_color
       @a_color = A_Color.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def color_params
+    def a_color_params
       params.require(:a_color).permit(:r, :g, :b)
     end
 end
