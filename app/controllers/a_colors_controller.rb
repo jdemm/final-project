@@ -4,7 +4,7 @@ class AColorsController < ApplicationController
   # GET /a_colors
   # GET /a_colors.json
   def index
-    @a_colors =  A_Color.all
+    @a_colors =  AColor.all
   end
 
   # GET /a_colors/1
@@ -14,7 +14,7 @@ class AColorsController < ApplicationController
 
   # GET /colors/new
   def new
-    @a_color  = A_Color.new
+    @a_color  = AColor.new
   end
 
   # GET /a_colors/1/edit
@@ -64,7 +64,7 @@ class AColorsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_a_color
-      @a_color = A_Color.find(params[:id])
+      @a_color = AColor.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
