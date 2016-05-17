@@ -1,5 +1,12 @@
 <h1>New A_Color</h1>
 
+
+
 <%= render 'form' %>
 
 <%= link_to 'Back', a_colors_path %>
+
+
+def new
+  @a_color = A_Color.new
+end

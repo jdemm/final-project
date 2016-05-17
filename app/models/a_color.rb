@@ -17,7 +17,18 @@ def make_a_color
 
 
    hex = "##{sprintf("%02X", r)}#{sprintf("%02X", g)}#{sprintf("%02X", b)}"
-    Image.new(100,100) { self.background_color = hex }
+   image =  Image.new(100,100) { self.background_color = hex }
+   image.write(self.get_file_path)
+   image.display
 end    
+
+
+def get_file_path
+    
+    
+    a_file = "#{Rails.root}/public/images/color_#{id}_img.png"
+    return a_file
+    
+end
     
 end
