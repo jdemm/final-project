@@ -1,6 +1,6 @@
 class AColorsController < ApplicationController
   before_action :set_a_color, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   # GET /a_colors
   # GET /a_colors.json
   def index
@@ -14,7 +14,7 @@ class AColorsController < ApplicationController
 
   # GET /colors/new
   def new
-    @a_colors =  A_Color.new
+    @a_color  = A_Color.new
   end
 
   # GET /a_colors/1/edit

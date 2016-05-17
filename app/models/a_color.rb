@@ -19,8 +19,13 @@ def make_a_color
    hex = "##{sprintf("%02X", r)}#{sprintf("%02X", g)}#{sprintf("%02X", b)}"
    image =  Image.new(100,100) { self.background_color = hex }
    image.write(self.get_file_path)
-   image.display
-end    
+   
+end  
+
+
+def display_image
+    image.display
+end
 
 
 def get_file_path
